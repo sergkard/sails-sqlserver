@@ -1,38 +1,29 @@
 {
-  "name": "sails-sqlserver",
+  "name": "waterline-sqlserver",
   "version": "0.10.9",
-  "description": "Official SQL Server Adapter for Sails / Waterline",
+  "description": "Microsoft SQL Server adapter for waterline",
   "main": "lib/adapter.js",
   "scripts": {
     "test": "node test/integration/runner -R spec -b"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cnect/sails-sqlserver.git"
+    "url": "https://github.com/FinalDevStudio/waterline-sqlserver.git"
   },
   "keywords": [
-    "cnect",
-    "sails",
-    "sails-mssql",
-    "sails-sqlserver",
+    "waterline-sqlserver",
     "sql server",
+    "waterline",
     "sqlserver",
     "microsoft",
-    "azure",
     "adapter",
-    "waterline",
-    "sails.js",
-    "mssql",
-    "sqlserver"
+    "azure",
+    "mssql"
   ],
-  "author": "Travis Webb <tjwebb@cnectdata.com>",
+  "author": "Final Development Studio <sorcery@finaldevstudio.com>",
   "contributors": [
-    "balderdashy",
-    "Stuart Welham",
-    "wxactly",
-    "Seich",
-    "tjwebb",
-    "jaredfromsubway"
+    "Santiago G. Marín <santiago@finaldevstudio.com>",
+    "Travis Webb <tjwebb@cnectdata.com>"
   ],
   "license": "MIT",
   "dependencies": {
@@ -49,11 +40,11 @@
     "waterline-cursor"
   ],
   "devDependencies": {
-    "waterline-adapter-tests": "git://github.com/tjwebb/waterline-adapter-tests",
-    "mocha": "*"
+    "mocha": "*",
+    "waterline-adapter-tests": "^0.10.13"
   },
   "waterlineAdapter": {
-    "type": "sails-sqlserver",
+    "type": "waterline-sqlserver",
     "interfaces": [
       "semantic",
       "queryable",

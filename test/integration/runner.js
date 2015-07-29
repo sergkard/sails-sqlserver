@@ -70,7 +70,7 @@ var connection = new mssql.Connection({
     ].join(' '), function (err, results) {
       if (err) throw err;
       console.log('Starting test runner...');
-      
+
       new TestRunner({
 
         mocha: {
