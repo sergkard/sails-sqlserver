@@ -1,15 +1,13 @@
-Unofficial Microsoft SQL Server adapter for [sails.js](http://sailsjs.org/). Tested on SQL Server 2012 and 2014,
-but should support any SQL Server 2005 and newer. CI tests are run against SQL
-Server Express. Published by [c*nect](http://www.cnectdata.com/).
+Unofficial Microsoft SQL Server adapter for [waterline](https://github.com/balderdashy/waterline). Tested on SQL Server 2008, but should support any SQL Server 2005 and newer.
 
 ### 1. Install
 ```sh
-$ npm install sails-sqlserver --save
+$ npm install waterline-sqlserver --save
 ```
 
 ### 2. Configure
 
-#### `config/models.js`
+#### `config/model.js`
 ```js
 {
   connection: 'sqlserver'
@@ -20,7 +18,7 @@ $ npm install sails-sqlserver --save
 ```js
 {
   sqlserver: {
-    adapter: 'sails-sqlserver',
+    adapter: 'waterline-sqlserver',
     user: 'cnect',
     password: 'pass',
     host: 'abc123.database.windows.net' // azure database
@@ -31,15 +29,3 @@ $ npm install sails-sqlserver --save
   }
 }
 ```
-
-## License
-MIT
-
-[npm-image]: https://img.shields.io/npm/v/sails-sqlserver.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/sails-sqlserver
-[sails-logo]: http://cdn.tjw.io/images/sails-logo.png
-[sails-url]: https://sailsjs.org
-[ci-image]: https://img.shields.io/circleci/project/cnect/sails-sqlserver/master.svg?style=flat-square
-[ci-url]: https://circleci.com/gh/cnect/sails-sqlserver
-[daviddm-image]: http://img.shields.io/david/cnect/sails-sqlserver.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/cnect/sails-sqlserver
