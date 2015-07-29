@@ -67,7 +67,7 @@ var userModel = {
       type: 'string',
       required: true,
       unique: true,
-      length: 255 // defaults to 'max'
+      size: 255 // defaults to 'max'
     },
 
     password: {
