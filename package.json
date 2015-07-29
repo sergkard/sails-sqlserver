@@ -1,6 +1,6 @@
 {
   "name": "waterline-sqlserver",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Microsoft SQL Server adapter for waterline",
   "main": "lib/adapter.js",
   "scripts": {},
