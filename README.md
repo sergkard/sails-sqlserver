@@ -1,11 +1,4 @@
-## <a href="http://www.cnectdata.com/"><img src="http://www.cnectdata.com/wp-content/uploads/2014/04/cnect-logo-200x57-20141118.png" height='32px' /></a> All-in-One Data Management Stack
-
-### sails-sqlserver
-[![NPM version][npm-image]][npm-url]
-[![Build status][ci-image]][ci-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
-
-Official Microsoft SQL Server adapter for [sails.js](http://sailsjs.org/). Tested on SQL Server 2012 and 2014,
+Unofficial Microsoft SQL Server adapter for [sails.js](http://sailsjs.org/). Tested on SQL Server 2012 and 2014,
 but should support any SQL Server 2005 and newer. CI tests are run against SQL
 Server Express. Published by [c*nect](http://www.cnectdata.com/).
 
