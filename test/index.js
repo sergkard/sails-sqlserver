@@ -98,6 +98,34 @@ describe('Waterline SQL Server', function () {
         done();
       });
     });
+
+    it('should find a user by it\'s id', function (done) {
+      collections.user.findOneById(data.users[0].id).
+
+      exec(function (err, user) {
+        expect(err).to.be.null;
+        expect(user).to.be.an('object');
+        expect(user.id).to.equal(data.users[0].id);
+
+        done();
+      });
+    });
+
+    it('should find a user by it\'s email', function (done) {
+      collections.user.findOne().
+
+      where({
+        email: data.users[0].email
+      }).
+
+      exec(function (err, user) {
+        expect(err).to.be.null;
+        expect(user).to.be.an('object');
+        expect(user.email).to.equal(data.users[0].email);
+
+        done();
+      });
+    });
   });
 
   describe('tags collection', function () {
@@ -164,8 +192,73 @@ describe('Waterline SQL Server', function () {
         expect(post.body).to.be.a('string');
         expect(post.tags).to.be.an('array');
         expect(post.user).to.be.a('number');
+        expect(post.user).to.equal(data.users[0].id);
 
         data.posts.push(post);
+
+        done();
+      });
+    });
+
+    it('should retrieve a post by it\'s id', function (done) {
+      collections.post.findOneById(data.posts[0].id).
+
+      exec(function (err, post) {
+        expect(err).to.be.null;
+
+        expect(post).to.be.an('object');
+        expect(post.title).to.be.a('string');
+        expect(post.body).to.be.a('string');
+        expect(post.tags).to.be.an('array');
+        expect(post.user).to.be.a('number');
+        expect(post.user).to.equal(data.users[0].id);
+
+        data.posts.push(post);
+
+        done();
+      });
+    });
+
+    it('should retrieve a post by it\'s id and populate it\'s tags and user', function (done) {
+      collections.post.findOneById(data.posts[0].id).
+
+      populate('tags').
+      populate('user').
+
+      exec(function (err, post) {
+        expect(err).to.be.null;
+
+        expect(post).to.be.an('object');
+        expect(post.title).to.be.a('string');
+        expect(post.body).to.be.a('string');
+
+        expect(post.tags).to.be.an('array');
+
+        post.tags.forEach(function (tag) {
+          expect(tag).to.be.an('object');
+          expect(tag.name).to.be.a('string');
+          expect(tag.id).to.be.a('number');
+        });
+
+        expect(post.user).to.be.an('object');
+        expect(post.user.name).to.be.a('string');
+        expect(post.user.email).to.be.a('string');
+        expect(post.user.age).to.be.a('number');
+        expect(post.user.id).to.be.a('number');
+
+        data.posts.push(post);
+
+        done();
+      });
+    });
+
+    it('should remove a post', function (done) {
+      collections.post.destroy({
+        id: data.posts[0].id
+      }).
+
+      exec(function (err) {
+        expect(err).to.be.null;
 
         done();
       });
