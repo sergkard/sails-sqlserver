@@ -1,4 +1,4 @@
-Microsoft SQL Server adapter for [waterline](https://github.com/balderdashy/waterline). Tested on SQL Server 2008, but should support any SQL Server 2005 and newer.
+Microsoft SQL Server adapter for [waterline](https://github.com/balderdashy/waterline). Built for Microsoft SQL Server 2012 and newer.
 
 # Installing
 
