@@ -1,6 +1,6 @@
 {
   "name": "waterline-sqlserver",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Microsoft SQL Server adapter for waterline",
   "main": "lib/adapter.js",
   "scripts": {
@@ -22,15 +22,16 @@
   ],
   "author": "Final Development Studio <sorcery@finaldevstudio.com>",
   "contributors": [
+    "Guillaume Hertault <guillaume@youshould.eu>",
     "Santiago G. Marín <santiago@finaldevstudio.com>",
     "Travis Webb <tjwebb@cnectdata.com>"
   ],
   "license": "MIT",
   "dependencies": {
-    "lodash": "^3.10.1",
-    "mssql": "^2.2.0",
-    "underscore.string": "^3.0.0",
-    "waterline-cursor": "0.0.5"
+    "lodash": "^4.11.2",
+    "mssql": "^3.3.0",
+    "underscore.string": "^3.3.4",
+    "waterline-cursor": "0.0.6"
   },
   "waterlineAdapter": {
     "type": "waterline-sqlserver",
@@ -42,7 +43,7 @@
     ]
   },
   "devDependencies": {
-    "waterline": "^0.10.26",
+    "waterline": "^0.10.31",
     "chai": "^3.2.0",
     "mocha": "^2.2.5"
   }
