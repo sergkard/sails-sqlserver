@@ -25,6 +25,7 @@ var config = {
     default: {
       adapter: 'default',
       database: 'database_name',
+      databaseSchema: 'schema_name',
       host: 'addrestohost',
       port: 1433,
       user: 'dbo',
