@@ -1,5 +1,5 @@
 {
-  "name": "waterline-sqlserver",
+  "name": "sails-sqlserver",
   "version": "1.1.10",
   "description": "Microsoft SQL Server adapter for waterline",
   "main": "lib/adapter.js",
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/QSonx/waterline-sqlserver.git"
+    "url": "https://github.com/QSonx/sails-sqlserver.git"
   },
   "keywords": [
-    "waterline-sqlserver",
+    "sails-sqlserver",
     "sql server",
     "waterline",
     "sqlserver",
